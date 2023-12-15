@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+     .sideBtn {
+          @apply px-1 py-1 font-semibold rounded md:px-2 md:py-2 bg-slate-300;
+     }
+
+     .ctgBtn{
+          @apply px-1 py-1 md:px-2 font-semibold rounded w-fit bg-slate-300;
+     }
+
+     .hBtn{
+          @apply text-center py-2 px-3 w-fit rounded bg-black text-white font-bold lg:text-lg;
+     }
+
+     .detailsButton{
+          @apply px-4 py-2 font-bold rounded w-fit text-white;
+     }
+
+     .icon{
+          @apply text-[#081A51] text-xl md:text-3xl;
+     }
+
+     .h1Cmn{
+          @apply text-sm md:text-base font-bold tracking-wider;
+     }
+
+     .spnCmn{
+          @apply text-sm md:text-base font-semibold text-zinc-600;
+     }
+
+     .footerH{
+          @apply text-sm md:text-base font-bold pb-1 border-b-4 border-[#652827] w-fit;
+     }
+
+     .footerP{
+          @apply text-xs md:text-sm hover:cursor-pointer font-semibold mt-2 lg:mt-4;
+     }
+
+     .footerIcon{
+          @apply text-white text-lg md:text-4xl mt-4 mr-3 hover:cursor-pointer;
+     }
+
+     .cartQun{
+          @apply pr-2 py-1 text-sm md:text-lg font-bold text-[#505050]
+     }
+
+     .sideCartDiv{
+          @apply flex justify-between font-semibold text-[#505050] text-lg
+     }
+}
