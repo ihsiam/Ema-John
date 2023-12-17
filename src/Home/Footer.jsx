@@ -9,7 +9,7 @@ function Footer() {
     <div className=' text-white'>
      <img src={wave}/>
 
-     <div className='bg-[#090830] grid grid-cols-2 lg:grid-cols-4 gap-10 w-full px-2 md:px-20 lg:pl-48 pb-5'>
+     <div className='bg-[#090830] grid grid-cols-2 lg:grid-cols-4 gap-10 w-full px-10 md:pl-48 py-5'>
           <div className=''>
             <h1 className='footerH'>Company</h1>
             <p className='footerP'>Privacy Policy</p>

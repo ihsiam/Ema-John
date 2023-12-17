@@ -3,7 +3,6 @@ import Navbar from './Component/Navbar'
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Cart from './Pages/Cart'
 import Wishlist from './Pages/Wishlist'
-import User from './Pages/User'
 import Home from './Home/Home'
 import Details from './Pages/Details'
 import { useState } from 'react'
@@ -67,7 +66,6 @@ function App() {
           <Route path='/' element={<Home searchData={searchItem}/>}/>
           <Route path='/cart' element={<Cart CartData={cartData} setCartData={setCartData}  handleRemove={removeCart}/>}/>
           <Route path='/wishlist' element={<Wishlist data={wishData} handleRmove={removeWish}/>}/>
-          <Route path='/user' element={<User/>}/>
           <Route path='/:key' element={<Details handleCart={CartItem} handleWish={wishItem}/>}/>
           <Route path='/wishlist/:key' element={<WishListDetails handleCart={CartItem}/>}/>
         </Routes>

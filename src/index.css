@@ -32,11 +32,11 @@
      }
 
      .footerH{
-          @apply text-sm md:text-base font-bold pb-1 border-b-4 border-[#652827] w-fit;
+          @apply text-sm md:text-base font-semibold md:font-bold pb-1 border-b-2 border-[#652827] w-fit;
      }
 
      .footerP{
-          @apply text-xs md:text-sm hover:cursor-pointer font-semibold mt-2 lg:mt-4;
+          @apply text-xs md:text-sm hover:cursor-pointer font-medium mt-3 lg:mt-4;
      }
 
      .footerIcon{
@@ -49,5 +49,17 @@
 
      .sideCartDiv{
           @apply flex justify-between font-semibold text-[#505050] text-lg
+     }
+
+     .userBtn{
+          @apply px-3 md:px-5 border-2 h-10 md:h-12 text-sm md:text-base rounded-md flex items-center gap-2 font-bold
+     }
+
+     .userInputDiv{
+          @apply w-full flex items-center gap-4 bg-[#F7F7F7] px-2 py-2 rounded
+     }
+
+     .userInput{
+          @apply w-20 md:w-full text-xs md:text-base focus:outline-none bg-[#F7F7F7] tracking-wider
      }
 }
