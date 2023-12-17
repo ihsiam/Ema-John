@@ -23,7 +23,7 @@ function SingUp({setSignIn, setSignUp}) {
             <div className='userInputDiv'>
               <FontAwesomeIcon icon={faLock} />
               <input className='userInput'
-              type="password" placeholder='Re-type Password' name="password" id="password" />
+              type="password" placeholder='Re-type Password' name="re-password" id="re-password" />
             </div>
 
             <button
