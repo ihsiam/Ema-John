@@ -33,7 +33,7 @@ function SignIn({setSignIn, setSignUp}) {
               type="password" placeholder='Password' name="password" id="password" />
             </div>
             <button
-            className='px-10 py-2 bg-black text-xs md:text-base text-white font-bold h-fit mx-auto rounded mt-2'>
+            className='px-10 py-2 bg-[#081A51] text-xs md:text-base text-white font-bold h-fit mx-auto rounded mt-2'>
               Sign Up
             </button> 
           </div>

@@ -6,29 +6,30 @@ import { faCopyright } from '@fortawesome/free-regular-svg-icons'
 
 function Footer() {
   return (
+    
     <div className=' text-white'>
      <img src={wave}/>
 
      <div className='bg-[#090830] grid grid-cols-2 lg:grid-cols-4 gap-10 w-full px-10 md:pl-48 py-5'>
-          <div className=''>
+          <div>
             <h1 className='footerH'>Company</h1>
             <p className='footerP'>Privacy Policy</p>
             <p className='footerP'>API</p>
             <p className='footerP'>Terms</p>
           </div>
-          <div className=''>
+          <div>
             <h1 className='footerH'>Get Help</h1>
             <p className='footerP'>FAQ</p>
             <p className='footerP'>Payment option</p>
             <p className='footerP'>Watch Video</p>
           </div>
-          <div className=''>
+          <div>
             <h1 className='footerH'>Office</h1>
             <p className='footerP'>Level-5, House No: 5</p>
             <p className='footerP'>Block-B, Mirpur-10</p>
             <p className='footerP'>Dhaka, Bangladesh</p>
           </div>
-          <div className=''>
+          <div>
             <h1 className='footerH'>Social Links</h1>
             <div>
               <FontAwesomeIcon className='footerIcon' icon={faFacebook} />
@@ -39,11 +40,12 @@ function Footer() {
      </div>
 
      <div className='text-white bg-[#090830] px-2 lg:px-20 pb-2'>
-      <h1 className='text-xs text-center font-bold'>
+      <h1 className='text-xs text-center font-medium'>
         <FontAwesomeIcon className='mr-1' icon={faCopyright} /> 
         All Rights Reserved.
-        </h1>
+      </h1>
      </div>
+
     </div>
   )
 }

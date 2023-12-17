@@ -1,7 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLock, faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import Icon from '../logo/favicon.ico';
 
 function SingUp({setSignIn, setSignUp}) {
   return (
@@ -28,15 +27,15 @@ function SingUp({setSignIn, setSignUp}) {
             </div>
 
             <button
-            className='px-10 py-2 bg-black text-xs md:text-base text-white font-bold h-fit mx-auto rounded mt-2'>
+            className='px-10 py-2 bg-[#081A51] text-xs md:text-base text-white font-bold h-fit mx-auto rounded mt-2'>
               Sign Up
             </button> 
           </div>
 
-          <div className='flex text-xs gap-4 mt-2 cursor-pointer'>
+          <div className='flex text-xs gap-4 mt-2'>
             <h1 className='text-[#5F666C]'>Already have account?</h1>
             <h1
-            className='text-[#081A51] font-bold'
+            className='text-[#081A51] font-bold  cursor-pointer'
             onClick={() =>{
               setSignIn(true);
               setSignUp(false);

@@ -12,15 +12,21 @@ function WishListDetails(props) {
 
   return (
     <div>
-      <Detail data={data}/>
-      <div className='pl-5 md:pl-[295px] lg:pl-[520px] bg-white pb-5'>
-        <button
-        onClick={() => handleCart({...data, quantity : 1})}
-        className='detailsButton bg-[#0861F2]'>
-          <FontAwesomeIcon className='mr-2' icon={faCartShopping} />
-          Buy Now
-        </button>
+      <div className='shadow'>
+
+        <Detail data={data}/>
+
+        <div className='pl-5 md:pl-[295px] lg:pl-[520px] bg-white pb-5'>
+          
+          <button
+          onClick={() => handleCart({...data, quantity : 1})}
+          className='detailsButton bg-[#0861F2]'>
+            <FontAwesomeIcon className='mr-2' icon={faCartShopping} />
+            Buy Now
+          </button>
+        </div>
       </div>
+      
       
       <Feature details={data.features}/>
     </div>

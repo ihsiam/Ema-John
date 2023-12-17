@@ -20,24 +20,26 @@ function Details(props) {
   return (
     <div className='w-full'>
 
-      <Detail data={data}/>
+      <div className='shadow'>
+        <Detail data={data}/>
 
-      <div className='pl-5 md:pl-[295px] lg:pl-[520px] bg-white pb-5'>
+        <div className='pl-5 md:pl-[295px] lg:pl-[520px] bg-white pb-5'>
 
-          <button
-          onClick={() => add(handleCart,{...data, quantity : 1})}
-          className='detailsButton bg-[#0861F2]'>
-            <FontAwesomeIcon className='mr-2' icon={faCartShopping} />
-            Buy Now
-          </button>
+            <button
+            onClick={() => add(handleCart,{...data, quantity : 1})}
+            className='detailsButton bg-[#0861F2]'>
+              <FontAwesomeIcon className='mr-2' icon={faCartShopping} />
+              Buy Now
+            </button>
 
-          <button
-          onClick={() => add(handleWish,data)}
-          className='detailsButton bg-[#30BD63] ml-5'>
-            <FontAwesomeIcon className='mr-2' icon={faHeart} />
-            Add to wishlist
-          </button>
+            <button
+            onClick={() => add(handleWish,data)}
+            className='detailsButton bg-[#30BD63] ml-5'>
+              <FontAwesomeIcon className='mr-2' icon={faHeart} />
+              Add to wishlist
+            </button>
 
+        </div>
       </div>
 
       <Feature details={data.features}/>

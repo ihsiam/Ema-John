@@ -24,7 +24,7 @@ function Navbar(props) {
           <div>
                <input
                onChange={handleSearch}
-               className=' w-28 md:w-64 px-2 py-1 rounded border-2 focus:outline-none'
+               className=' w-28 md:w-64 shadow-inner px-2 py-1 rounded border-2 focus:outline-none'
                type="text" placeholder='Search here' />
           </div>
 
