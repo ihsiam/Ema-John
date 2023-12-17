@@ -56,10 +56,10 @@
      }
 
      .userInputDiv{
-          @apply w-full flex items-center gap-4 bg-[#F7F7F7] px-2 py-2 rounded
+          @apply w-full flex items-center gap-2 md:gap-4 bg-[#F7F7F7] px-2 py-2 rounded
      }
 
      .userInput{
-          @apply w-20 md:w-full text-xs md:text-base focus:outline-none bg-[#F7F7F7] tracking-wider
+          @apply w-full text-xs md:text-base focus:outline-none bg-[#F7F7F7] tracking-wider
      }
 }

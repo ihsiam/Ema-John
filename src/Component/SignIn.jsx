@@ -39,9 +39,11 @@ function SignIn({setSignIn, setSignUp}) {
           </div>
 
           
-          <div className='flex text-xs text-[#5F666C] gap-4 mt-2 cursor-pointer'>
-            <h1>Forgotten Password?</h1>
-            <h1 onClick={() =>{
+          <div className='flex text-xs gap-4 mt-2 cursor-pointer'>
+            <h1 className='text-[#5F666C]'>Forgotten Password?</h1>
+            <h1
+            className='text-[#081A51] font-bold'
+            onClick={() =>{
               setSignIn(false);
               setSignUp(true);
             }}>Sign Up</h1>

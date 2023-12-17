@@ -1,11 +1,13 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLock, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import Icon from '../logo/favicon.ico';
 
 function SingUp({setSignIn, setSignUp}) {
   return (
      <div>
-          <div className='flex flex-col w-full mt-4 gap-2'>
+          <h1 className='text-center font-semibold text-[#081A51] mt-2 px-7 md:px-[55px]'>Welcome to our family</h1>
+          <div className='flex flex-col w-full mt-2 gap-2'>
 
             <div className='userInputDiv'>
               <FontAwesomeIcon icon={faEnvelope} />
@@ -31,9 +33,11 @@ function SingUp({setSignIn, setSignUp}) {
             </button> 
           </div>
 
-          <div className='flex text-xs text-[#5F666C] gap-4 mt-2 cursor-pointer'>
-            <h1>Already have account?</h1>
-            <h1 onClick={() =>{
+          <div className='flex text-xs gap-4 mt-2 cursor-pointer'>
+            <h1 className='text-[#5F666C]'>Already have account?</h1>
+            <h1
+            className='text-[#081A51] font-bold'
+            onClick={() =>{
               setSignIn(true);
               setSignUp(false);
             }}>Sign In</h1>
