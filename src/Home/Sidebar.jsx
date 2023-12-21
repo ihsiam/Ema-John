@@ -2,15 +2,16 @@ import React, { useState } from 'react';
 import fakeData from '../db';
 
 function Sidebar(props) {
-
   const maxp = fakeData.reduce((max, obj) => Math.max(max, obj.price), fakeData[0].price);
 
   const [data, setData] = useState(fakeData);
+  const [activeButton, setActiveButton] = useState('all'); // Track the active button
 
-  const handleFilter = (min, max) => {
+  const handleFilter = (min, max, button) => {
     const filterData = fakeData.filter((product) => product.price >= min && product.price <= max);
     setData(filterData);
     props.data(filterData);
+    setActiveButton(button);
   };
 
   return (
@@ -21,32 +22,33 @@ function Sidebar(props) {
 
       <div className='my-2 flex flex-wrap md:flex-col gap-2'>
         <button
-          className="sideBtn"
+          className={`sideBtn ${activeButton === 'all' ? 'Active' : ''}`}
           onClick={() => {
-            setData(fakeData); // Reset to the original data
+            setData(fakeData);
             props.data(fakeData);
+            setActiveButton('all');
           }}
         >
           All
         </button>
 
         <button
-          className="sideBtn"
-          onClick={() => handleFilter(0, 300)}
+          className={`sideBtn ${activeButton === '0-300' ? 'Active' : ''}`}
+          onClick={() => handleFilter(0, 300, '0-300')}
         >
           $00 - 300
         </button>
 
         <button
-          className="sideBtn"
-          onClick={() => handleFilter(301, 600)}
+          className={`sideBtn ${activeButton === '301-600' ? 'Active' : ''}`}
+          onClick={() => handleFilter(301, 600, '301-600')}
         >
           $301 - 600
         </button>
 
         <button
-          className="sideBtn"
-          onClick={() => handleFilter(601, maxp)}
+          className={`sideBtn ${activeButton === '601-rest' ? 'Active' : ''}`}
+          onClick={() => handleFilter(601, maxp, '601-rest')}
         >
           $601 - rest
         </button>

@@ -7,12 +7,16 @@
           @apply shadow-md px-1 py-1 font-semibold rounded md:px-2 md:py-2 bg-slate-300;
      }
 
+     .Active {
+          @apply bg-black text-white;
+     }
+
      .ctgBtn{
-          @apply shadow px-1 py-1 md:px-2 font-semibold rounded w-fit bg-slate-300;
+          @apply shadow px-1 py-1 md:px-2 font-semibold rounded w-fit;
      }
 
      .hBtn{
-          @apply text-center py-2 px-3 w-fit rounded bg-black text-white font-bold lg:text-lg;
+          @apply text-center py-2 px-3 w-fit rounded bg-[#081A51] text-white font-bold lg:text-lg;
      }
 
      .detailsButton{
@@ -20,7 +24,7 @@
      }
 
      .icon{
-          @apply text-[#081A51] text-xl md:text-3xl;
+          @apply text-[#081A51] text-xl md:text-3xl cursor-pointer;
      }
 
      .h1Cmn{

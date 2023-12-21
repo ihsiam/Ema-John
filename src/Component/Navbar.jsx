@@ -18,7 +18,7 @@ function Navbar(props) {
     <div>
      <div className='flex w-full justify-between items-center px-2 md:px-5 py-2'>
           <NavLink to='/'>
-               <img className=' w-16 h-8 md:w-32 md:h-10 fill-black' src={Logo} alt="Logo"/>
+               <img className=' w-16 h-8 md:w-32 md:h-10' src={Logo} alt="Logo"/>
           </NavLink>
 
           <div>

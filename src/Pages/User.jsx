@@ -10,7 +10,7 @@ function User() {
 
   return (
     <div>
-      <div className='absolute top-16 right-2 shadow-2xl md:right-5 bg-white rounded px-4 py-2 md:px-10 md:py-4'>
+      <div className='absolute top-16 right-2 shadow-2xl bg-white rounded-md px-4 py-2 md:px-10 md:py-4'>
         {Signin && <SignIn setSignIn={setSignIn} setSignUp={setSignUp}/>}
         {Signup && <SingUp setSignIn={setSignIn} setSignUp={setSignUp}/>}
       </div>
