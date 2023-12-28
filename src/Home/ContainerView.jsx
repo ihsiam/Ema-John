@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { motion } from "framer-motion"
 
 function ContainerView(props) {
 
@@ -15,7 +16,12 @@ function ContainerView(props) {
             data.map((data) =>(
               <Link key={data.key} to={data.key} state={data}>
     
-                <div className='flex flex-col rounded-lg  bg-[#FCFCFC] shadow-lg'>
+                <motion.div
+                initial={{ opacity: 0, scale: .5}}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: false }}
+                transition={{ duration: .5 }}
+                className='flex flex-col rounded-lg  bg-[#FCFCFC] shadow-lg'>
     
                   <div className='flex justify-center w-full px-2 py-2'>
                     <img className='h-20 w-20 md:h-32 md:w-32 rounded-t' src={data.img} alt="" />
@@ -26,7 +32,7 @@ function ContainerView(props) {
                     <h1 className='text-xs lg:text-base font-semibold'>Price: ${data.price}</h1>
                   </div>
                   
-                </div>
+                </motion.div>
               </Link>
             ))
           }

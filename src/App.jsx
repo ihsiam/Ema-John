@@ -65,7 +65,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home searchData={searchItem}/>}/>
           <Route path='/cart' element={<Cart CartData={cartData} setCartData={setCartData}  handleRemove={removeCart}/>}/>
-          <Route path='/wishlist' element={<Wishlist data={wishData} handleRmove={removeWish}/>}/>
+          <Route path='/wishlist' element={<Wishlist data={wishData} removeWish={removeWish}/>}/>
           <Route path='/:key' element={<Details handleCart={CartItem} handleWish={wishItem}/>}/>
           <Route path='/wishlist/:key' element={<WishListDetails handleCart={CartItem}/>}/>
         </Routes>

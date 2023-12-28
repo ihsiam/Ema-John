@@ -4,7 +4,7 @@
 
 @layer components{
      .sideBtn {
-          @apply shadow-md px-1 py-1 font-semibold rounded md:px-2 md:py-2 bg-slate-300;
+          @apply shadow-md px-2 py-1 font-semibold rounded md:py-2 bg-slate-300;
      }
 
      .Active {
@@ -12,7 +12,7 @@
      }
 
      .ctgBtn{
-          @apply shadow px-1 py-1 md:px-2 font-semibold rounded w-fit;
+          @apply shadow px-2 py-1 font-semibold rounded w-fit;
      }
 
      .hBtn{

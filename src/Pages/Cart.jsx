@@ -2,8 +2,21 @@ import React, { useState } from 'react'
 import Sidecart from '../Component/Sidecart';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import { motion } from 'framer-motion';
 
 function Cart({CartData,setCartData, handleRemove}) {
+
+  const itemView = {
+    initial: { opacity: 0, x: -50 },
+    animate: { opacity: 1, x: 0 },
+    exit: { opacity: 0, x: -50 },
+  };
+
+  const containerView = {
+    animate: {
+      transition: { staggerChildren: 0.1 },
+    },
+  };
 
   const handleIncrement = (index) => {
     const updatedCart = [...CartData];
@@ -38,9 +51,9 @@ function Cart({CartData,setCartData, handleRemove}) {
         </h1>
 
 
-        <div className='mt-10'>
+        <motion.div variants={containerView} initial='initial' animate='animate' className='mt-10'>
           {CartData.map((item, index) => (
-            <div className='py-2 md:py-5 flex md:gap-5 shadow-md bg-white mb-5 rounded items-center justify-around' key={item.key}>
+            <motion.div variants={itemView} className='py-2 md:py-5 flex md:gap-5 shadow-md bg-white mb-5 rounded items-center justify-around' key={item.key}>
 
               <div className='flex items-center'>
                 <img className='h-16 w-16 md:h-24 md:w-24' src={item.img} alt="" />
@@ -56,15 +69,15 @@ function Cart({CartData,setCartData, handleRemove}) {
                 </div>
               </div>
 
-              <p className='text-xs md:text-base font-bold'>${parseFloat(item.price*item.quantity).toFixed(2)}</p>
+              <p className='text-xs md:text-base font-bold w-16 md:w-20'>${parseFloat(item.price*item.quantity).toFixed(2)}</p>
 
               <button onClick={() => handleClick(item.key)}>
                 <FontAwesomeIcon className='text-[#F70000]' icon={faTrash} />
               </button>
-            </div>
+            </motion.div>
           ))}
 
-        </div>
+        </motion.div>
       </div>
       
       <div className='w-full lg:w-1/3 h-fit'>
