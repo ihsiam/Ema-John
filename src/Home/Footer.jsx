@@ -34,7 +34,7 @@ function Footer() {
           transition={{duration:.5}}
           >
             <h1 className='footerH'>Company</h1>
-            <p className='footerP'>Privacy Policy</p>
+            <p className='footerP'>Privacy & Policy</p>
             <p className='footerP'>API</p>
             <p className='footerP'>Terms</p>
           </motion.div>
